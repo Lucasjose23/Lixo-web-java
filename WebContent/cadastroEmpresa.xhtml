@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+<head>
+
+<title>Cadastro Empresa</title>
+<meta http-equiv="Content-Type" name="viewport"
+	content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="estilo.css" />
+</head>
+<h:body>
+	<!-- Inicio do código-->
+
+	<!-- Menu-->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<section class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#movelmenu"
+					aria-expanded="false">
+
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+
+				<a href="index.xhtml" class="navbar-brand"> CollectTrash - Coleta
+					de Lixo Eletrônico </a>
+			</div>
+
+
+			<div class="collapse navbar-collapse pull-right" id="movelmenu">
+				<ul class="nav navbar-nav">
+					<li><a href="index.xhtml">Home</a></li>
+					<!--  <li><a href="listagem.html">Inicio</a></li>-->
+					<li><a href="#">Ajuda</a></li>
+					<li><a href="#">Sobre</a></li>
+				</ul>
+
+				<a href="login.xhtml" class="btn btn-primary navbar-btn">Login</a> <a
+					href="logout.xhtml" class="btn btn-danger navbar-btn">Logout</a>
+			</div>
+		</section>
+	</nav>
+	
+	<div class="container">
+            <h3 class="page-header">Cadastro de Empresa para coleta de lixo</h3>
+
+            <h:form action="" class="col-sm-8 col-sm-offset-2">
+            
+            
+                <div class="form-group">
+                    <label for="nome">Nome Empresa</label>
+                    <h:inputText class="form-control" value="#{empresaBean.empresa.nome}"   type="text" id="nome" placeholder="Nome" required="true" requiredMessage="Insira o nome da empresa !"/>
+                    <h:message for="nome"></h:message>
+                </div>
+
+                <div class="form-group">
+                    <label for="cnpj">CNPJ</label>
+                    <h:inputText class="form-control" value="#{empresaBean.empresa.cnpj}"   type="text" id="cnpj" placeholder="cnpj" required="true" requiredMessage="Insira o cnpj !"/>
+                    <h:message for="cnpj"></h:message>
+                </div>
+			
+                <div class="form-group">
+                    <label for="login">Login</label>
+                    <h:inputText class="form-control" value="#{empresaBean.empresa.login}"   type="text" id="login" placeholder="nome de usuário para login" required="true" requiredMessage="Insira o login !"/>
+                	<h:message for="login"></h:message>
+                </div>
+
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <h:inputSecret class="form-control" value="#{empresaBean.empresa.senha}"   type="text" id="senha" placeholder="senha" required="true" requiredMessage="Insira a senha !"/>
+                    <h:message for="senha"></h:message>
+                </div>
+            
+                <hr/>
+
+                <h:commandButton class= "btn btn-success btn-md pull-left btn-block" action="#{empresaBean.adicionaEmpresa}" value="Criar Conta" id="criarConta"/>
+                <br />
+                <br />
+            </h:form>
+            <br />
+        </div>
+	
+	
+	
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+</h:body>
+</html>

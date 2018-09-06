@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+<head>
+
+<title>Cadastro Local de descarte</title>
+<meta http-equiv="Content-Type" name="viewport"
+	content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="estilo.css" />
+</head>
+<h:body>
+	<!-- Inicio do código-->
+
+	<!-- Menu-->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<section class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#movelmenu"
+					aria-expanded="false">
+
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+
+				<a href="index.xhtml" class="navbar-brand"> CollectTrash -
+					Coleta de Lixo Eletrônico </a>
+			</div>
+
+
+			<div class="collapse navbar-collapse pull-right" id="movelmenu">
+				<ul class="nav navbar-nav">
+					<li><a href="index.xhtml">Home</a></li>
+					<!--  <li><a href="listagem.html">Inicio</a></li>-->
+					<li><a href="#">Ajuda</a></li>
+					<li><a href="#">Sobre</a></li>
+				</ul>
+
+				<a href="login.xhtml" class="btn btn-primary navbar-btn">Login</a> <a
+					href="logout.xhtml" class="btn btn-danger navbar-btn">Logout</a>
+			</div>
+		</section>
+	</nav>
+
+	<div class="container">
+		<h3 class="page-header">Cadastro Local de Descarte</h3>
+
+		<h:form action="" class="col-sm-8 col-sm-offset-2">
+
+			<div class="row">
+				<div class="form-group col-sm-8">
+					<label for="nome">Nome</label>
+					<h:inputText class="form-control"
+						value="#{localDescarteBean.localDescarte.nome}" type="text"
+						id="nome" placeholder="Nome do local" required="true"
+						requiredMessage="Insira o nome do Local !" />
+					<h:message for="nome"></h:message>
+				</div>
+
+				<div class="form-group col-sm-4">
+					<label for="cpf">Complemento</label>
+					<h:inputText class="form-control"
+						value="#{localDescarteBean.localDescarte.complemento}" type="text"
+						id="complemento" placeholder="CPF" required="true"
+						requiredMessage="Insira o complemento !" />
+					<h:message for="complemento"></h:message>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="form-group col-sm-8">
+					<label for="endereco">Endereço</label>
+					<h:inputText class="form-control"
+						value="#{localDescarteBean.endereco.rua}" type="text"
+						id="endereco" placeholder="Rua" required="true"
+						requiredMessage="Insira o endereço !" />
+					<h:message for="endereco"></h:message>
+				</div>
+
+				<div class="form-group col-sm-4">
+					<label for="numero">Número</label>
+					<h:inputText class="form-control"
+						value="#{localDescarteBean.endereco.numero}" type="text"
+						id="numero" placeholder="Número" required="true"
+						requiredMessage="Insira o número !" />
+					<h:message for="numero"></h:message>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="form-group col-sm-4">
+					<label for="bairro">Bairro</label>
+					<h:inputText class="form-control"
+						value="#{localDescarteBean.endereco.bairro}" type="text"
+						id="bairro" placeholder="Bairro" required="true"
+						requiredMessage="Insira o Bairro !" />
+					<h:message for="bairro"></h:message>
+				</div>
+
+				<div class="form-group col-sm-6">
+					<label for="cidade">Cidade</label>
+					<h:inputText class="form-control"
+						value="#{localDescarteBean.endereco.cidade}" type="text"
+						id="cidade" placeholder="Cidade" required="true"
+						requiredMessage="Insira a cidade !" />
+					<h:message for="cidade"></h:message>
+				</div>
+
+				<div class="form-group col-sm-2">
+					<label for="estado">Estado</label>
+					<h:inputText class="form-control"
+						value="#{localDescarteBean.endereco.estado}" type="text"
+						id="estado" placeholder="Estado" required="true"
+						requiredMessage="Insira o estado !" />
+					<h:message for="estado"></h:message>
+				</div>
+			</div>
+
+			<hr />
+
+			<h:commandButton class="btn btn-success btn-md pull-left btn-block"
+				action="#{localDescarteBean.createLocalDescarte}"
+				value="Adicionar Local" id="addLocal" />
+			<br />
+			<br />
+		</h:form>
+		<br />
+
+	</div>
+
+
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+</h:body>
+</html>

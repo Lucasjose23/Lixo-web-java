@@ -1,0 +1,50 @@
+div.container{
+	padding-top:70px;
+}
+
+div#galeria {
+	
+}
+
+
+/* body#login {
+	background-image:url('img/korea-2832270_1920.jpg');
+	background-repeat:no-repeat;
+	background-size:contain;
+	background-position:center;
+	width:100%;
+}
+
+div.container#loginTextos a {
+	color: white;
+}
+
+h3.page-header#tituloLogin {
+	color: white;
+}
+
+*/
+
+
+
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+}
+.footer p{
+	color: gray;
+}
+
+div.carousel-inner p{
+	font-size: 20px;
+	text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+
+
+

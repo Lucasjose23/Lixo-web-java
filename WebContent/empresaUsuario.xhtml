@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+<head>
+
+<title>Tipo de Conta</title>
+<meta http-equiv="Content-Type" name="viewport"
+	content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="estilo.css" />
+</head>
+<h:body>
+	<!-- Inicio do código-->
+
+	<!-- Menu-->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<section class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#movelmenu"
+					aria-expanded="false">
+
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+
+				<a href="index.xhtml" class="navbar-brand"> CollectTrash - Coleta
+					de Lixo Eletrônico </a>
+			</div>
+
+
+			<div class="collapse navbar-collapse pull-right" id="movelmenu">
+				<ul class="nav navbar-nav">
+					<li><a href="index.xhtml">Home</a></li>
+						<!--  <li><a href="listagem.html">Inicio</a></li>-->
+					<li><a href="#">Ajuda</a></li>
+					<li><a href="#">Sobre</a></li>
+				</ul>
+
+				<a href="login.xhtml" class="btn btn-primary navbar-btn">Login</a> <a
+					href="logout.xhtml" class="btn btn-danger navbar-btn">Logout</a>
+			</div>
+		</section>
+	</nav>
+	
+	
+	<div class="container">
+            <h3 class="page-header" id="tituloLogin"><strong>Escolha o tipo da Conta</strong></h3>
+
+            <h:form class="col-sm-6 col-sm-offset-3">
+                
+                <div class="row">
+                    <a href="cadastroUsuario.xhtml" class="btn btn-default btn-block" role="button">Cadastro de Usuário</a>
+                </div>
+                <br/>
+
+                <div class="row">
+                    <a href="cadastroEmpresa.xhtml" class="btn btn-default btn-block" role="button">Cadastro de Empresa</a>
+                </div>
+                <hr/>
+            </h:form>
+        </div>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</h:body>
+</html>
